@@ -5,6 +5,6 @@ public class BaseFormatter implements NumberFormatter{
     }
     @Override
     public String format(int n) {
-        return String.valueOf(Integer.parseInt(num,n));
+        return Integer.toString(Integer.parseInt(num ),n);
     }
 }

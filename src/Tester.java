@@ -6,7 +6,7 @@ public class Tester {
         boolean correct = false;
         String num = null;
         do{
-            System.out.println("Enter an Integer: ");
+            System.out.print("Enter an Integer: ");
             if(input.hasNextInt()){
                 num = input.next();
                 correct = true;
@@ -17,19 +17,19 @@ public class Tester {
         boolean correct2 = false;
         int n = 0;
         do{
-            System.out.println("Enter an Integer: ");
+            System.out.print("Enter number base: ");
             if(input.hasNextInt()){
-                num = input.next();
+                n = input.nextInt();
                 correct2 = true;
             }else{
                 System.out.println("Please input an Integer: ");
             }
         }while(!correct2);
-        BaseFormatter format1 = new BaseFormatter(num);
-        AccountingFormatter format2 = new AccountingFormatter();
-        System.out.println("Accounting Format:");
-        format2.format(Integer.parseInt(num));
-        System.out.println("Base Format:");
-        format1.format(n);
+        NumberFormatter format1 = new AccountingFormatter();
+        NumberFormatter format2 = new BaseFormatter(num);
+        System.out.print("Accounting Format:");
+        System.out.println(format1.format(Integer.parseInt(num)));
+        System.out.print("Base Format:");
+        System.out.println(format2.format(n));
     }
 }
